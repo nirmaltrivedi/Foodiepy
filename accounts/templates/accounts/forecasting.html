@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        form{
+            margin-top: 50px;
+            margin-left: 150px;
+            margin-right: 150px;
+            }
+    </style>
+    <meta charset="UTF-8">
+    <title>Food Demand Forecasting</title>
+</head>
+<body>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<br><br>-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Foodiepy</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'landing' %}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'home' %}">Inventory management</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+<form method="POST">
+    {% csrf_token %}
+  <div class="form-group row">
+    <label for="category" class="col-3 col-form-label">Category</label>
+    <div class="col-4">
+      <select id="category" name="category" class="custom-select" required="required">
+        <option value="0">Beverages</option>
+        <option value="8">Rice Bowl</option>
+        <option value="13">Starters</option>
+        <option value="6">Pasta</option>
+        <option value="10">Sandwich</option>
+        <option value="1">Biryani</option>
+        <option value="3">Extras</option>
+        <option value="7">Pizza</option>
+        <option value="11">Seafood</option>
+        <option value="5">Other Snacks</option>
+        <option value="2">Desert</option>
+        <option value="12">Soup</option>
+        <option value="9">Salad</option>
+        <option value="4">Fish</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="cuisine" class="col-3 col-form-label">Cuisine</label>
+    <div class="col-4">
+      <select id="cuisine" name="cuisine" class="custom-select" required="required">
+        <option value="3">Thai</option>
+        <option value="1">Indian</option>
+        <option value="2">Italian</option>
+        <option value="0">Continental</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="week" class="col-3 col-form-label">Week</label>
+    <div class="col-4">
+      <input id="week" name="week" placeholder="Enter number of weeks you want to forecast for" type="text" class="form-control" required="required">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="checkout_price" class="col-3 col-form-label">Checkout Price</label>
+    <div class="col-4">
+      <input id="checkout_price" name="checkout_price" placeholder="Enter Checkout price" type="text" class="form-control" required="required">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="base_price" class="col-3 col-form-label">Base Price</label>
+    <div class="col-4">
+      <input id="base_price" name="base_price" placeholder="Enter Base Price" type="text" class="form-control" required="required">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-3">Emailer for promotion</label>
+    <div class="col-4">
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="emailer" id="emailer_0" type="radio" required="required" class="custom-control-input" value="1" checked="checked">
+        <label for="emailer_0" class="custom-control-label">Yes</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="emailer" id="emailer_1" type="radio" required="required" class="custom-control-input" value="0">
+        <label for="emailer_1" class="custom-control-label">No</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-3">Homepage Featured</label>
+    <div class="col-4">
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="homepage" id="homepage_0" type="radio" class="custom-control-input" value="1" required="required">
+        <label for="homepage_0" class="custom-control-label">Yes</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="homepage" id="homepage_1" type="radio" class="custom-control-input" value="0" required="required" checked="checked">
+        <label for="homepage_1" class="custom-control-label">No</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="city" class="col-3 col-form-label">City Code</label>
+    <div class="col-4">
+      <input id="city" name="city" placeholder="Enter City Code" type="text" class="form-control" required="required">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="region" class="col-3 col-form-label">Region Code</label>
+    <div class="col-4">
+      <input id="region" name="region" placeholder="Enter Region Code" type="text" class="form-control" required="required">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="op_area" class="col-3 col-form-label">Operational Area</label>
+    <div class="col-4">
+      <input id="op_area" name="op_area" placeholder="Enter Operational" type="text" class="form-control" required="required">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="center_type" class="col-3 col-form-label">Center Type</label>
+    <div class="col-4">
+      <select id="center_type" name="center_type" class="custom-select">
+        <option value="0">Type A</option>
+        <option value="1">Type B</option>
+        <option value="2">Type C</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="offset-4 col-8">
+      <input type="submit" value="Predict" class="butn">
+
+<!--      <button name="submit" type="submit" class="btn btn-primary">Forecast</button>-->
+    </div>
+    <h5 style="color:black;text-align:center;">Approximate orders for {{ week }} weeks: {{ output }}</h5>
+  </div>
+</form>
+</body>
+</html>

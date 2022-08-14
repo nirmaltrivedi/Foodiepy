@@ -1,0 +1,587 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Homepage</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	  <link rel='stylesheet' type='text/css' media='screen' href="{% static '/css/bootstrap.min.css' %}">
+  <link rel='stylesheet' type='text/css' media='screen' href="{% static '/js/bootstrap.bundle.min.js' %}">
+
+  <link rel='stylesheet' type='text/css' media='screen' href="{% static '/css/style.css' %}">
+  <link rel='stylesheet' type='text/css' media='screen' href="{% static '/css/responsive.css' %}">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+  </script>
+
+</head>
+
+<body>
+
+
+  <!-- section 1 ( header )  starts -->
+
+  <section class="bg_img">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-3">
+
+          <div class="logo_name" id="Team">
+            <a href="{% url 'landing' %}">
+              <h1>FOODIEPY</h1>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="col-lg-9">
+          <div class="top_menu">
+            <nav class="navbar navbar-expand-lg ">
+              <!-- <div class="container-fluid"> -->
+              <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#home">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#services">SERVICES</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about_us">ABOUT US</a>
+                  </li>
+<!--                  <li class="nav-item">-->
+<!--                    <a class="nav-link" href="#contact_us">CONTACT US</a>-->
+<!--                  </li>-->
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}">LOG IN</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'register' %}">SIGN UP</a>
+                  </li>
+
+                </ul>
+              </div>
+
+            </nav>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-0">
+
+      <div class="col-lg-12">
+
+        <div class="main_content text-center">
+
+          <h4>Forecast Food Demand For Next Few Weeks Using Our ML Model.</h4>
+
+          <h6>Manage your inventory and forecast food demand for your center at one place.</h6>
+
+          <div class="btn_1 mt-5">
+
+            <!-- <button class="btn btn-light btn-outline-warning">Food Demand Forecasting</button> -->
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- section 1 ( header )  ends -->
+
+
+  <!-- section 2 ( Our Services )  starts-->
+
+
+  <section>
+
+    <div class="container mb_90">
+
+      <div class="row">
+
+        <div class="col-lg-12">
+
+          <div class="services_title text-center mt_90 " id="services">
+
+            <h1> Our <u class="hr text-dark">Services</u></h1>
+
+
+          </div>
+
+        </div>
+
+
+
+
+      </div>
+
+
+      <div class="row mt-5  ">
+
+        <div class=" offset-lg-1 offset-md-1 col-lg-4  col-md-4 col-sm-12 mt">
+
+          <div class="img_1">
+
+            <!-- <img src="img/remaining/images/mainbg.jpg" alt="" class="img_center img-fluid"> -->
+            <img src="{% static 'img/remaining/images/mainbg.jpg' %}" alt="Nature" class="img-fluid img_center">
+            <div class="text-block">
+              <h4>food demand forcasting</h4>
+
+              <p>It is very important for any fulfilment center to forecast optimum food demand for its center. Using
+                this
+                model, you can forecast food demand for your fulfilment center.
+
+              </p>
+
+              <div class="f_c">
+                <a href="{% url 'forecasting' %}">Forecast Now!</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="col-lg-4 col-md-4 col-sm-12  offset-md-2 offset-lg-2  mt" >
+
+          <div class="img_2">
+
+            <!-- <img src="img/remaining/images/mainbg.jpg" alt="" class="img_center img-fluid"> -->
+
+            <!-- <img src="img/remaining/images/cuscopy.jpg" alt="Nature" width="500" height="202px"> -->
+            <a href="{% url 'home' %}" ><img src="{% static 'img/remaining/images/cuscopy.jpg' %}" alt="Nature" class="img-fluid img_center"></a>
+            <div class="text-block_2">
+              <h4>INVENTORY MANAGEMENT</h4>
+
+              <p>Inventory Management helps center owner to keep track of available items at its center. Also they can
+                keep track of no. of orders placed, add new items, etc.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+    </div>
+  </section>
+
+
+  <!-- section 2 ( Our Services )  ends-->
+
+
+
+  <!-- section 3 ( About us )  starts -->
+
+
+  <section class="bg_gray_color">
+
+    <div class="container mb_90">
+
+      <div class="row">
+
+        <div class="col-lg-12">
+
+          <div class="services_title text-center mt_90" id="about_us">
+
+            <h1> <u class="hr text-dark">About</u> Us</h1>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="row mt-5">
+
+        <div class="col-lg-6 ">
+
+          <div class="l_s_img">
+            <img src="{% static 'img/remaining/images/aboutfin.jpg' %}" alt="" width="500" height="350">
+          </div>
+        </div>
+
+
+        <div class="col-lg-6">
+
+          <div class="r_s_content">
+
+            <h1>THE OBJECTIVE</h1>
+            <p> OF THIS PROJECT IS TO CREATE A PROTOTYPE FOR A FOOD DELIVERY COMPANY WHERE ONE CAN FORECAST
+              FOOD DEMAND FOR NEXT FEW WEEKS AND CENTER OWNERS CAN MANAGE THEIR INVENTORY.</p>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+    </div>
+  </section>
+
+
+
+  <!-- section 3 ( about us )  ends  -->
+
+
+
+
+
+  <!-- section 4 ( team section )  starts  -->
+
+
+
+  <section class="team_bg">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-12">
+
+          <div class="o_t_heading mt_90 ">
+            <h3>OUR TEAM</h3>
+            <!--
+                        <h2 class="title">Expert Team
+                            <span>Member</span> </h2> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+
+
+        <div class="col-lg-4 col-md-6 col-sm-12  mb_90">
+
+          <div class="o_t_member ">
+
+            <img src="{% static 'img/remaining/team_img/darshan_copy.jpeg' %}" alt="">
+
+            <div class="team_content bg-dark">
+
+              <h5>Darshan Bhavsar</h5>
+
+              <p>ML Engineer</p>
+
+              <div class="links_1">
+
+                <ul>
+                  <li><a href="https://www.linkedin.com/in/darshan-bhavsar-93370721a/" target="_blank"><i
+                        class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                  <li><a href=""><i class="fa fa-instagram" target="_blank" aria-hidden="true"></i></a></li>
+                  <li><a href="https://github.com/darsh295"><i class="fa fa-github" target="_blank"
+                        aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12  mb_90">
+
+          <div class="o_t_member ">
+
+            <img src="{% static 'img/remaining/team_img/nirmal_copy.jpg' %}" alt="">
+
+
+            <div class="team_content bg-dark">
+
+              <h5>Nirmal Trivedi</h5>
+
+              <p>ML Engineer</p>
+
+              <div class="links_1">
+
+                <ul>
+                  <li><a href="https://www.linkedin.com/in/nirmal-trivedi-80929a23b/" target="_blank"><i
+                        class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                  <li><a href="https://www.instagram.com/trivedinirmal17/"><i class="fa fa-instagram" target="_blank"
+                        aria-hidden="true"></i></a></li>
+                  <li><a href="https://github.com/nirmaltrivedi"><i class="fa fa-github" target="_blank"
+                        aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12 col-sm-12  mb_90">
+
+          <div class="o_t_member ">
+
+            <img src="{% static 'img/remaining/team_img/JIGAR.jpeg' %}" alt="" class="img-fluid">
+
+
+            <div class="team_content bg-dark">
+
+              <h5>Jigar Parmar</h5>
+
+              <p>Web Developer</p>
+
+              <div class="links_1">
+
+                <ul>
+                  <li><a href="https://www.linkedin.com/in/jigar-parmar-b507a3229/" target="_blank"><i
+                        class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                  <li><a href="https://www.instagram.com/parmarjigar313/" target="_blank"><i class="fa fa-instagram"
+                        aria-hidden="true"></i></a></li>
+                  <li><a href="https://github.com/jigarparmar313"><i class="fa fa-github" target="_blank"
+                        aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- section 4 ( team section )  ends    -->
+
+
+  <!-- section 5 ( Contact Us) starts -->
+
+
+<!--  <section class="bg-drop-dark">-->
+
+<!--    <div class="container-fluid ">-->
+
+<!--      <div class="row">-->
+
+<!--        <div class="col-lg-12 mt_90 text-center">-->
+
+<!--          <div class="drop_message" id="contact_us">-->
+
+<!--            <h2>Drop <u class="hr">Us</u> A Line</h2>-->
+
+<!--            <p class="mt-5 mb-5">Welcome to the official website of Food Demand Forecasting.<br> Please feel free to-->
+<!--              contact us if you have any doubt/queries. You can send us a message below.-->
+<!--            </p>-->
+
+<!--            <div class="container">-->
+<!--              <form action="/action_page.php">-->
+
+
+<!--                <div class="row">-->
+
+<!--                  <div class="col-lg-6">-->
+<!--                    <input type="text" class="form-control" id="name" placeholder="Name" name="email">-->
+<!--                  </div>-->
+
+<!--                  <div class="col-lg-6">-->
+<!--                    <input type="number" class="form-control" id="number" placeholder="Phone Number"-->
+<!--                      name="phone_number">-->
+<!--                  </div>-->
+
+
+
+<!--                </div>-->
+
+<!--                <div class="row">-->
+
+<!--                  <div class="col-lg-6">-->
+<!--                    <input type="email" class="form-control" id="email" placeholder="Email" name="email">-->
+<!--                  </div>-->
+
+<!--                  <div class="col-lg-6">-->
+<!--                    <input type="text" class="form-control" id="sub" placeholder="Subject" name="sub">-->
+<!--                  </div>-->
+<!--                </div>-->
+
+<!--                <div class="row">-->
+
+<!--                  <div class="col-lg-12 ">-->
+
+<!--                    <input type="text" class="form-control" id="cont" placeholder="Message" name="content">-->
+
+
+<!--                    <div class="btn_3 mb_90">-->
+
+<!--                      <button type="button" class="btn btn-warning  btn3 ">SEND</button>-->
+<!--                    </div>-->
+
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </form>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--      </div>-->
+
+<!--    </div>-->
+<!--    </div>-->
+<!--  </section>-->
+
+
+
+  <!-- section 5 ( Contact Us) ends -->
+
+
+
+
+
+
+  <!-- section 6 ( footer )   starts   -->
+
+  <section class="bg-black_gradient_img">
+
+    <div class="container">
+
+      <div class="row">
+
+        <!-- <div class="col-lg-12">
+
+          <div class="row"> -->
+
+        <div class="col-lg-6 col-md-6">
+
+          <div class="logo_at_footer">
+
+            <div class="logo_name">
+              <a href="index_2.html">
+                <h1>FOODIEPY</h1>
+              </a>
+            </div>
+
+            <h6>Forecast Food Demand For Next Few Weeks Using Our ML Model.</h6>
+
+            <p style="font-size:10px;">THE OBJECTIVE
+              OF THIS PROJECT IS TO CREATE A PROTOTYPE FOR A FOOD DELIVERY COMPANY WHERE ONE CAN FORECAST
+              FOOD DEMAND FOR NEXT FEW WEEKS AND CENTER OWNERS CAN MANAGE THEIR INVENTORY.</p>
+          </div>
+
+
+          <div class="add">
+            <div class="address_icon">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+            </div>
+
+
+            <div class="address mb_90">
+              <h3>ADDRESS</h3>
+              <h4>jrpr143@gmail.com</h4>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="col-lg-6 col-md-6 mt-5">
+
+
+
+          <div class="navig text-center">
+
+            <h4>Our Services</h4>
+
+            <ul>
+              <li><a href="{% url 'forecasting' %}">FOOD DEMAND FORCASTING</a></li>
+              <li><a href="{% url 'home' %}">INVENTORY MANAGEMENT</a></li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    </div>
+
+    </div>
+    </div>
+
+    </div>
+
+
+    </div>
+    </div>
+    </div>
+  </section>
+
+
+
+  <!-- section 12 ( footer  section )   ends                 -->
+
+
+  <!-- section 13 ( copyright  section )   starts               -->
+
+<!--  <section class="bg-black ">-->
+
+<!--    <div class="container">-->
+
+<!--      <div class="row g-0">-->
+
+<!--        <div class="col-lg-6 col-md-6 col-sm-6 g-0">-->
+
+<!--          <div class="copyright mt_25 mb_25">-->
+
+<!--            &lt;!&ndash; <h6> Coppyright © by MM Wedding 2016. Made with love by AHT Studio.</h6> &ndash;&gt;-->
+<!--            Copyright © by Foodiepy 2022.-->
+
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        <div class="col-lg-6 col-md-6 col-sm-6  g-0">-->
+
+<!--          <div class="social_media mt_25">-->
+
+<!--            <ul class="p-0">-->
+<!--              <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>-->
+<!--              <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>-->
+<!--              <li><a href=""><i class="fa fa-github" aria-hidden="true"></i></a></li>-->
+<!--              <li><a href=""><i class="fa fa-github" aria-hidden="true"></i></a></li>-->
+<!--            </ul>-->
+<!--          </div>-->
+<!--        </div>-->
+
+
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
+
+  <!-- section 13 ( copyright  section )   ends               -->
+
+
+
+
+
+
+</body>
+
+</html>
